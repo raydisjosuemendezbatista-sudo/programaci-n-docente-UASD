@@ -1,0 +1,36 @@
+CÓMO SUBIR ESTE SITIO — LÉEME PRIMERO
+======================================
+
+1) SUBE TODA LA CARPETA tal cual está (mismos nombres, misma estructura):
+
+   index.html
+   data.json
+   robots.txt
+   sitemap.xml
+   /assets/site.css
+   /materias/  (2,160 páginas + index.html)
+
+   Todo debe quedar en la RAÍZ de tu dominio (no dentro de una subcarpeta),
+   para que las rutas relativas (../, materias/, assets/) funcionen.
+
+2) IMPORTANTE — reemplaza el dominio de ejemplo:
+   Los archivos "sitemap.xml" y "robots.txt" usan un dominio de ejemplo:
+
+       https://TU-DOMINIO-AQUI.com
+
+   Cuando tengas tu dominio real, abre esos dos archivos y reemplaza
+   "https://TU-DOMINIO-AQUI.com" por tu dominio real (ej. https://huevosmendez.com
+   o el que hayas comprado). Puedes pedirme que lo haga yo si me dices
+   el dominio final.
+
+3) DALE DE ALTA EN GOOGLE (una sola vez):
+   - Entra a Google Search Console (search.google.com/search-console)
+   - Agrega tu dominio
+   - Envía el sitemap: https://tudominio.com/sitemap.xml
+   - Google empezará a indexar las 2,160 páginas de materias en los
+     días/semanas siguientes (no es instantáneo).
+
+4) CADA SEMESTRE NUEVO:
+   Pásame el nuevo Excel de la UASD y yo te regenero TODO de nuevo:
+   data.json, las 2,160 páginas de materias actualizadas, el índice
+   y el sitemap — listos para volver a subir.
