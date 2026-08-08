@@ -1,0 +1,204 @@
+:root{
+  --blue:#2F6FED;
+  --blue-dark:#1E4FC4;
+  --blue-soft:#E8F0FF;
+  --ink:#1A2136;
+  --muted:#6B7385;
+  --bg:#F4F6FB;
+  --card:#FFFFFF;
+  --line:#E7EAF2;
+
+  --virtual:#0EA894;
+  --virtual-bg:#E3FBF6;
+  --presencial:#2F6FED;
+  --presencial-bg:#E8F0FF;
+  --semi:#8B5CF6;
+  --semi-bg:#F1EBFF;
+
+  --gold:#FFB020;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+::selection{background:var(--gold);color:#1A2136;}
+a{color:var(--blue);}
+
+/* ---------- Static page header (non-sticky, simpler than the app) ---------- */
+.site-header{
+  background:linear-gradient(155deg, var(--blue) 0%, var(--blue-dark) 100%);
+  color:#fff;
+  padding:22px 18px 24px;
+  border-radius:0 0 22px 22px;
+}
+.site-header a.brand{
+  color:#fff;
+  text-decoration:none;
+  font-family:'Sora',sans-serif;
+  font-weight:800;
+  font-size:15px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  opacity:.9;
+}
+.crumb{
+  font-size:12px;
+  color:rgba(255,255,255,.75);
+  margin:10px 0 4px;
+}
+.crumb a{color:#fff;text-decoration:underline;}
+h1.page-title{
+  font-family:'Sora',sans-serif;
+  font-weight:800;
+  font-size:21px;
+  line-height:1.25;
+  margin:6px 0 4px;
+}
+.page-sub{
+  font-size:13px;
+  color:rgba(255,255,255,.85);
+  margin:0;
+}
+
+main.wrap{
+  max-width:720px;
+  margin:0 auto;
+  padding:18px 14px 60px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  align-content:flex-start;
+}
+
+.mini-search{
+  display:flex;
+  gap:8px;
+  margin-top:16px;
+}
+.mini-search input{
+  flex:1;
+  padding:12px 14px;
+  border-radius:12px;
+  border:none;
+  font-size:14px;
+  font-family:'Inter',sans-serif;
+}
+.mini-search button{
+  padding:12px 16px;
+  border-radius:12px;
+  border:none;
+  background:#fff;
+  color:var(--blue-dark);
+  font-weight:700;
+  font-family:'Inter',sans-serif;
+  cursor:pointer;
+}
+
+/* ---------- Cards (shared with the app) ---------- */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:16px 16px 14px;
+  box-shadow:0 2px 10px rgba(20,30,60,.04);
+  flex:1 1 320px;
+  min-width:0;
+}
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:10px;
+}
+.nrc-block{display:flex;align-items:center;gap:8px;}
+.mod-icon{
+  width:34px;height:34px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex:0 0 auto;background:var(--presencial-bg);
+}
+.mod-icon.virtual{background:var(--virtual-bg);}
+.mod-icon.semi{background:var(--semi-bg);}
+.nrc-text .nrc{
+  font-family:'Sora',sans-serif;font-weight:700;font-size:18px;
+  color:var(--ink);line-height:1.1;font-variant-numeric:tabular-nums;
+}
+.nrc-text .clave{font-size:11.5px;font-weight:600;color:var(--muted);}
+
+.meta-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.badge{font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:8px;background:var(--presencial-bg);color:var(--presencial);}
+.badge.virtual{background:var(--virtual-bg);color:var(--virtual);}
+.badge.semi{background:var(--semi-bg);color:var(--semi);}
+.badge.campus{background:var(--bg);color:var(--muted);}
+.badge.seccion{background:var(--bg);color:var(--muted);}
+.badge.tipo{background:#FFF3DC;color:#8A5A00;}
+
+.horarios{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:5px;}
+.h-row{font-size:13px;font-weight:500;color:var(--ink);display:flex;gap:7px;align-items:baseline;}
+
+.cupos-btn{
+  width:100%;margin-top:12px;padding:11px;border-radius:12px;border:none;
+  background:var(--gold);color:#3D2600;font-family:'Inter',sans-serif;
+  font-weight:700;font-size:13px;cursor:pointer;text-align:center;text-decoration:none;display:block;
+}
+.cupos-btn:active{transform:scale(.98);}
+
+.back-link{
+  display:inline-block;margin:18px 0 4px;
+  font-size:13.5px;font-weight:700;color:var(--blue-dark);text-decoration:none;
+  flex:1 1 100%;
+}
+
+footer.site-footer{
+  max-width:720px;margin:0 auto;padding:14px 20px 40px;
+  font-size:11.5px;color:var(--muted);text-align:center;line-height:1.7;
+}
+footer.site-footer a{color:var(--blue);font-weight:600;text-decoration:none;}
+
+/* ---------- Materias index page ---------- */
+.area-group{margin-bottom:22px;flex:1 1 100%;}
+.area-title{
+  font-family:'Sora',sans-serif;font-weight:700;font-size:15px;
+  margin:0 0 8px;color:var(--ink);
+  background:var(--card);display:inline-block;padding:4px 10px;border-radius:8px;
+  border:1px solid var(--line);
+}
+.area-list{display:flex;flex-wrap:wrap;gap:6px;}
+.area-list a{
+  font-size:12.5px;font-weight:600;background:var(--card);border:1px solid var(--line);
+  color:var(--ink);padding:6px 10px;border-radius:8px;text-decoration:none;
+}
+.area-list a:hover{border-color:var(--blue);}
+
+.az-nav{
+  display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 22px;
+}
+.az-nav a{
+  font-size:12px;font-weight:700;background:#fff;border:1px solid var(--line);
+  color:var(--blue-dark);padding:5px 9px;border-radius:6px;text-decoration:none;
+}
+
+/* ---------- Tablet / desktop ---------- */
+@media (min-width:640px){
+  .site-header{padding:26px 26px 28px;border-radius:0 0 26px 26px;}
+  h1.page-title{font-size:24px;}
+  .page-sub{font-size:13.5px;}
+  footer.site-footer{max-width:900px;}
+}
+@media (min-width:860px){
+  main.wrap{max-width:920px;gap:16px;padding:24px 20px 70px;}
+  .mini-search{max-width:640px;}
+  footer.site-footer{max-width:920px;}
+  .card{flex:1 1 340px;}
+}
+@media (min-width:1180px){
+  main.wrap{max-width:1180px;gap:18px;}
+  footer.site-footer{max-width:1180px;}
+  .card{flex:1 1 30%;}
+}
