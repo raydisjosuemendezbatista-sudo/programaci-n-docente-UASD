@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://programaciondocenteuasd.netlify.app/sitemap.xml
